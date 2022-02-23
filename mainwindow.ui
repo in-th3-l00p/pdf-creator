@@ -32,6 +32,13 @@
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="AddFiles">
+        <property name="text">
+         <string>Add multiple files</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="removeButton">
         <property name="text">
          <string>Remove</string>

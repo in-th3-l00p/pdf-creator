@@ -33,6 +33,8 @@ private slots:
 
     void on_actionExport_triggered();
 
+    void on_AddFiles_clicked();
+
 private:
     Ui::MainWindow *ui;
     QListWidgetItem *getSelectedItem();

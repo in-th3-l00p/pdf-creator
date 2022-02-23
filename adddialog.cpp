@@ -21,7 +21,7 @@ QString AddDialog::getPath()
 void AddDialog::on_browseButton_clicked()
 {
     QFileDialog dialog(this);
-    dialog.setNameFilter("Image Files (*.png *.jpg *.jpeg)");
+    dialog.setNameFilter("Images (*.png *.jpg *.jpeg)");
     dialog.exec();
     if (!dialog.result())
         return;

@@ -133,3 +133,34 @@ void MainWindow::on_actionSave_triggered()
 
 }
 
+
+void MainWindow::on_AddFiles_clicked()
+{
+    QStringList files = QFileDialog::getOpenFileNames(this, "Open", "", "Images (*.png *.jpg *.jpeg)");
+    if (!files.size())
+        return;
+
+    //adding
+    for (auto &path: files)
+        this->ui->imageList->addItem(path);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
