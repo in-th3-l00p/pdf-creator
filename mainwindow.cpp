@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "adddialog.h"
 #include "confirmationdialog.h"
+#include "pdf.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -112,6 +113,18 @@ void MainWindow::on_actionQuit_triggered()
     dialog.exec();
     if (dialog.result())
         this->destroy();
+}
+
+void MainWindow::on_actionExport_triggered()
+{
+    //getting the save path
+    QString pathDialog = QFileDialog::getSaveFileName(this, "Export document", "", "PDFs (*.pdf)");
+
+    if (pathDialog != "") {
+        qDebug() << "test\n";
+        PDFCreator creator(this->ui->imageList);
+        creator.createPDF(pathDialog.toStdString());
+    }
 }
 
 

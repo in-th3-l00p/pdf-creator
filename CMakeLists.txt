@@ -22,6 +22,8 @@ set(PROJECT_SOURCES
         adddialog.cpp
         confirmationdialog.h
         confirmationdialog.cpp
+        pdf.h
+        pdf.cpp
         mainwindow.ui
         adddialog.ui
 )
@@ -50,6 +52,7 @@ else()
 endif()
 
 target_link_libraries(PDF-Creator PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(PDF-Creator PRIVATE hpdf)
 
 set_target_properties(PDF-Creator PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
